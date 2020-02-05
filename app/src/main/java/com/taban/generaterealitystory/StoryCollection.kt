@@ -5,7 +5,14 @@ import kotlin.collections.ArrayList
 
 class StoryCollection {
 
-    var stories = ArrayList(Arrays.asList("a","b","c", "d", "e", "f", "g", "h"))
+    var stories = ArrayList(Arrays.asList("a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"))
 
     init {
         shuffle()
