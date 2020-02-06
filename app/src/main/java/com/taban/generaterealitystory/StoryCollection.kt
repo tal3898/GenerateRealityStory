@@ -5,7 +5,7 @@ import kotlin.collections.ArrayList
 
 class StoryCollection {
 
-    var stories = ArrayList(Arrays.asList("a",
+    var stories = ArrayList(Arrays.asList("I have two fathers. Since I was 10 my kids made fun of me. at the age 12, I decided to change school, and never told about my parents. I have always hidden it, and every time someone asked about them I used to change the subject. Only recently I ",
         "b",
         "c",
         "d",
