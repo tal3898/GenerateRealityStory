@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/c"
+    android:background="@drawable/d"
     tools:context=".MainActivity">
 
     <TextView
@@ -19,8 +19,7 @@
         android:layout_marginBottom="97dp"
         android:lineSpacingExtra="8sp"
         android:scrollbars="vertical"
-        android:text="abc def ghi jkl mno pqr stu vwx yz"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
