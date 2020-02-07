@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/capture"
+    android:background="@drawable/c"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/storyTxt"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="366dp"
+        android:layout_height="373dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="116dp"
@@ -24,6 +24,7 @@
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
