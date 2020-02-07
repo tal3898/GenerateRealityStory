@@ -5,14 +5,9 @@ import kotlin.collections.ArrayList
 
 class StoryCollection {
 
-    var stories = ArrayList(Arrays.asList("I have two fathers. Since I was 10 my kids made fun of me. at the age 12, I decided to change school, and never told about my parents. I have always hidden it, and every time someone asked about them I used to change the subject. Only recently I ",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h"))
+    var stories = ArrayList(Arrays.asList("I have two fathers. I have been bullied since I was 8 years old, for 4 years! At the age 12, I decided to change school, and never told about my parents. I have always hidden it, and every time someone asked about them I used to change the subject. Only recently I ",
+        "My mom died when I was 4 years old. I dont remember anything of her, except the night time, when she was telling me night stories. I dont even remember the stories. But I remember the feeling she made me feel. I remember I felt safe. It was hard to grow with out a mother. My dad had to raise and support 2 children, alone. I used to make it hard for him. I skipped classes, got bad grades... "
+    ))
 
     init {
         shuffle()
