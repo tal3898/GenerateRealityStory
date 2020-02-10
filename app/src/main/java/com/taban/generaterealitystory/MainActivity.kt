@@ -17,6 +17,8 @@ import com.google.android.gms.ads.*
 class MainActivity : AppCompatActivity() {
 
     var stories:StoryCollection = StoryCollection()
+    var isShowAd:Boolean = false
+    lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,13 @@ class MainActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
 
+        // fullad
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+
+        // banner ad
         val mAdView = adView
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
@@ -63,5 +72,10 @@ class MainActivity : AppCompatActivity() {
         var storyTextView:TextView = storyTxt
         var newStory:String = stories.getStory()
         storyTextView.setText(newStory)
+
+        if (isShowAd) {
+            mInterstitialAd.show()
+        }
+        isShowAd = !isShowAd
     }
 }
