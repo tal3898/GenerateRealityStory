@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         // fullad
         mInterstitialAd = InterstitialAd(this)
         mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
 
 
         // banner ad
@@ -74,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         storyTextView.setText(newStory)
 
         if (isShowAd) {
+            mInterstitialAd.loadAd(AdRequest.Builder().build())
             mInterstitialAd.show()
         }
         isShowAd = !isShowAd
