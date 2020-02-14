@@ -17,7 +17,8 @@ import com.google.android.gms.ads.*
 class MainActivity : AppCompatActivity() {
 
     var stories:StoryCollection = StoryCollection()
-    var isShowAd:Boolean = false
+    var isShowingAdClick = 1
+    var showingAdClicksInterval = 2
     lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,10 +73,9 @@ class MainActivity : AppCompatActivity() {
         var newStory:String = stories.getStory()
         storyTextView.setText(newStory)
 
-        if (isShowAd) {
+        if ((isShowingAdClick++)% showingAdClicksInterval == 0) {
             mInterstitialAd.loadAd(AdRequest.Builder().build())
             mInterstitialAd.show()
         }
-        isShowAd = !isShowAd
     }
 }
