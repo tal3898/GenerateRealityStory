@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         // fullad
         mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
-
+        mInterstitialAd.adUnitId = "ca-app-pub-5267648725343207/7092529294"
+        // mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712" //test id
 
         // banner ad
         val mAdView = adView
