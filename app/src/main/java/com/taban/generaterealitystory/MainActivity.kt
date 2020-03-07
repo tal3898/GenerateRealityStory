@@ -1,23 +1,14 @@
 package com.taban.generaterealitystory
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 import android.text.method.ScrollingMovementMethod
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.util.Log
 import com.google.android.gms.ads.*
-import org.json.JSONArray
-import org.json.JSONObject
-import org.xml.sax.Parser
-import java.lang.Exception
-import java.net.URL
+import com.google.gson.GsonBuilder
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,16 +18,33 @@ class MainActivity : AppCompatActivity() {
     var showingAdClicksInterval = 2
     lateinit var mInterstitialAd: InterstitialAd
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        ModelPreferencesManager.with(this)
 
         storyTxt.setMovementMethod(ScrollingMovementMethod())
 
         MobileAds.initialize(this) {}
 
+
+
+
+
+
+
+        // If there are stories saved in the shared preference
+        if (ModelPreferencesManager.get<StoryCollection>(StoryCollection.PREFF_NAME) != null) {
+            val savedStoryCollection = ModelPreferencesManager.get<StoryCollection>(StoryCollection.PREFF_NAME)!!
+            stories = savedStoryCollection
+        }
+
+
         val externalStoriesLoader = ExternalStoriesLoader(stories)
         externalStoriesLoader.load()
+
 
         // fullad
         mInterstitialAd = InterstitialAd(this)

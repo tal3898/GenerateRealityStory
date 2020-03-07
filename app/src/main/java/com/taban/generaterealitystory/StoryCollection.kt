@@ -1,10 +1,17 @@
 package com.taban.generaterealitystory
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import java.util.*
 import java.util.concurrent.CopyOnWriteArrayList
-import kotlin.collections.ArrayList
+import java.util.stream.Collectors
 
 class StoryCollection {
+
+    companion object {
+        val EMPTY = "EMPTY-COLLECTION"
+        val PREFF_NAME = "STORIES_COLLECTION2"
+    }
 
     var stories = CopyOnWriteArrayList(Arrays.asList(
         // realistic boring stories
@@ -45,6 +52,12 @@ class StoryCollection {
         shuffle()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun removeDuplicates() {
+        val nonDuplicateStories = CopyOnWriteArrayList<String>()
+        nonDuplicateStories.addAll(this.stories.stream().distinct().collect(Collectors.toList()))
+        this.stories = nonDuplicateStories
+    }
 
     fun shuffle() {
         var shuffledStories = CopyOnWriteArrayList<String>()
