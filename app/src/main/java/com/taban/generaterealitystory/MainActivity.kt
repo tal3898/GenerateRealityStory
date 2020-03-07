@@ -29,13 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
 
-
-
-
-
-
-
-        // If there are stories saved in the shared preference
+        // If there are stories saved in the shared preference, load them
         if (ModelPreferencesManager.get<StoryCollection>(StoryCollection.PREFF_NAME) != null) {
             val savedStoryCollection = ModelPreferencesManager.get<StoryCollection>(StoryCollection.PREFF_NAME)!!
             stories = savedStoryCollection

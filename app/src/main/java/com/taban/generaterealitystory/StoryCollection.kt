@@ -9,7 +9,6 @@ import java.util.stream.Collectors
 class StoryCollection {
 
     companion object {
-        val EMPTY = "EMPTY-COLLECTION"
         val PREFF_NAME = "STORIES_COLLECTION2"
     }
 
@@ -37,9 +36,7 @@ class StoryCollection {
         "I am trans-transgender. I changed my sex, and after a while changed it back to my original sex. My parents took it very hard that I changed my sex back to the original. They were the hardest people to tell that I want to change my sex to my original sex, but this is who I am, and they need to accept it.",
         "I am the perfect man. I am the CEO of the world, I have a degree in physics, chemistry, psychology, economics, computer science, data scientist, music. I am very talented too. I know to play the guitar, piano, violin, cello. I also love sport: tennis, football, basketball, swimming, gym, climbing, yoga, volleyball. I also cook a lot of chinese food, italian, deserts. As I said, I am the perfect man.",
         "My step brother's neighbor died 7 years ago. It was very hard for me. I could not sleep for 2 years. People thought I was loosing it. I was not even close to him, but it was very hard for me to accept it. I become alcoholic, and drank every morning. But with the help of my family, I never gave up, and quit drinking.",
-        ""
-
-
+        "I had a car accident last year. I remember everything from that day, and it cant get out of my head. It is hard for me to get over it. It was a rainy day, and when I was parking, I hit a poll. It cost me 1000 dollars to repair the car. It was a disaster. I remember every word the mechanic told me that day."
         ))
 
 
