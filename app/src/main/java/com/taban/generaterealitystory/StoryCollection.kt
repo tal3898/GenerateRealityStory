@@ -20,7 +20,9 @@ class StoryCollection {
         "I lost all my senses. I cant see, I cant hear, I cant smell, I cant taste, and I cant feel. There is an my brain is used by AI Machine that helps me with day to day tasks. Like speaking, it speaks for me. It helps me to hear. At school, kids used to call me cyborg, and bullied me. It was a hard time for me.",
         "When I was a kid my mom died 7 times. Every time she dies, it is worse that the one before. She is cursed, so once a year she die, and go back to life. Every time she come back to life, the whole family hope the curse go away to someone else. We are afraid that she will die, and will never wake up.",
         "I have one mom and two dads. My mom didn't know who is the father so she married both of them. When I was a kid all my kids laughed at me, and bullied me. I forgot to keep it in secret, so I changed school every year. So I kept telling it, and kept suffering from bulling. So it was hard for me the have friends.",
-        ""
+        "I am from the future. I am 18 years old, and I was born in 2304. In the future there is a time machine, which only people over 18+ can travel in time. It is my first ride and I am very excited. For the first ride I decided to go to your show, and show you what people from the future are capable of.",
+        "I am the oldest person alive. I am 212 years old, and look like 20. People dont believe me when I tell them this, but it is true. "
+
 
         ))
 
