@@ -35,24 +35,8 @@ class MainActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
 
-        val thread = Thread(Runnable {
-            try {
-                val apiResponse = URL("https://tal3898.github.io/GenerateRealityStory/").readText()
-                Log.i("GENERATE_REALITY_STORY", "the resopnse " + apiResponse)
-
-
-                val stories = "[\"qwe\", \"123\"]"
-                val answer = JSONArray(stories)
-                for (i in 0 until answer.length()) {
-                    Log.i("GENERATE_REALITY_STORY", "the answer " + answer.getString(i))
-                }
-
-            } catch (e:Exception) {
-                e.printStackTrace()
-            }
-        })
-        thread.start()
-
+        val externalStoriesLoader = ExternalStoriesLoader(stories)
+        externalStoriesLoader.load()
 
         // fullad
         mInterstitialAd = InterstitialAd(this)

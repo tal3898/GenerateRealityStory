@@ -26,9 +26,16 @@ class StoryCollection {
 
         ))
 
-    init {
+
+    constructor(_stories: ArrayList<String>) {
+        stories = _stories
         shuffle()
     }
+
+    constructor() {
+        shuffle()
+    }
+
 
     fun shuffle() {
         var shuffledStories = ArrayList<String>()
@@ -42,6 +49,19 @@ class StoryCollection {
         }
 
         stories = shuffledStories
+    }
+
+    fun getStoriesList() : ArrayList<String> {
+        return this.stories
+    }
+
+
+    /**
+     * The method gets a story collection, merge it into this collection, and shuffle
+     */
+    fun push(storyCollection: StoryCollection) {
+        this.stories.addAll(storyCollection.getStoriesList())
+        this.shuffle()
     }
 
     /**
