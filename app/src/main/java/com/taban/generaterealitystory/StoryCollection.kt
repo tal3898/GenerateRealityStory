@@ -49,13 +49,6 @@ class StoryCollection {
         shuffle()
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
-    fun removeDuplicates() {
-        val nonDuplicateStories = CopyOnWriteArrayList<String>()
-        nonDuplicateStories.addAll(this.stories.stream().distinct().collect(Collectors.toList()))
-        this.stories = nonDuplicateStories
-    }
-
     fun shuffle() {
         var shuffledStories = CopyOnWriteArrayList<String>()
         var randomInt = Random()
@@ -72,6 +65,10 @@ class StoryCollection {
 
     fun getStoriesList() : CopyOnWriteArrayList<String> {
         return this.stories
+    }
+
+    fun setStoriesList(lst : CopyOnWriteArrayList<String>) {
+        this.stories = lst
     }
 
 

@@ -10,8 +10,6 @@ import java.util.concurrent.CopyOnWriteArrayList
 
 class ExternalStoriesLoader(val originalStoriesCollection: StoryCollection) {
 
-
-    @RequiresApi(Build.VERSION_CODES.N)
     fun load() {
         val thread = Thread(Runnable {
             try {
@@ -19,16 +17,8 @@ class ExternalStoriesLoader(val originalStoriesCollection: StoryCollection) {
                 Log.i(Globals.LOG_TAG, "the resopnse from external data : " + apiResponse)
 
                 val storiesAsJson = JSONArray(apiResponse)
-
-                val storiesAsList = CopyOnWriteArrayList<String>()
-                for (i in 0 until storiesAsJson.length()) {
-                    storiesAsList.add(storiesAsJson.getString(i))
-                }
-
-                val externalStories = StoryCollection(storiesAsList)
-                originalStoriesCollection.push(externalStories)
-
-                originalStoriesCollection.removeDuplicates()
+                val newStoriesList = createNewStoriesList(storiesAsJson)
+                originalStoriesCollection.setStoriesList(newStoriesList)
 
                 ModelPreferencesManager.put(originalStoriesCollection, StoryCollection.PREFF_NAME)
             } catch (e: Exception) {
@@ -36,5 +26,19 @@ class ExternalStoriesLoader(val originalStoriesCollection: StoryCollection) {
             }
         })
         thread.start()
+    }
+
+    private fun createNewStoriesList(storiesAsJson : JSONArray): CopyOnWriteArrayList<String> {
+        val storiesAsList = CopyOnWriteArrayList<String>()
+        for (i in 0 until storiesAsJson.length()) {
+            storiesAsList.add(storiesAsJson.getString(i))
+        }
+
+        val externalStories = StoryCollection(storiesAsList)
+        val newStoryCollection = StoryCollection()
+
+        newStoryCollection.push(externalStories)
+
+        return newStoryCollection.getStoriesList()
     }
 }
