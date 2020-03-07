@@ -11,7 +11,13 @@ import androidx.core.app.ComponentActivity
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.util.Log
 import com.google.android.gms.ads.*
+import org.json.JSONArray
+import org.json.JSONObject
+import org.xml.sax.Parser
+import java.lang.Exception
+import java.net.URL
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +34,25 @@ class MainActivity : AppCompatActivity() {
         storyTxt.setMovementMethod(ScrollingMovementMethod())
 
         MobileAds.initialize(this) {}
+
+        val thread = Thread(Runnable {
+            try {
+                val apiResponse = URL("https://tal3898.github.io/GenerateRealityStory/").readText()
+                Log.i("GENERATE_REALITY_STORY", "the resopnse " + apiResponse)
+
+
+                val stories = "[\"qwe\", \"123\"]"
+                val answer = JSONArray(stories)
+                for (i in 0 until answer.length()) {
+                    Log.i("GENERATE_REALITY_STORY", "the answer " + answer.getString(i))
+                }
+
+            } catch (e:Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+
 
         // fullad
         mInterstitialAd = InterstitialAd(this)
