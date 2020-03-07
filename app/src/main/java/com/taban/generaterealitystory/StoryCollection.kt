@@ -15,7 +15,13 @@ class StoryCollection {
         "I lost my hearing when I was 14 years old. I used to play a piano before the accident. After the accident, it was hard for me to get back to music, and I quit. But I could'nt stop playing, so I started to memorize the notes, by visual tuners etc. and now I enjoy playing the piano like I enjoyed before.",
         "I suffer from anxiety and depression attacks. There are months that I don't leave my house, and stay in bed, and feel that I don't wanna be here anymore. I have a loving family who helps me in those difficult times, and I try to wake up, every morning with a smile.",
         "I am 7 years old. I may look like 20+ years old, but really, it is 7. I study in second grade, and everyone laugh at me because I look old. The teachers even laugh at me and think I am another teacher. I come home and cry, and ask for my parents to skip school some days.",
-        "I am a TikTok star."
+        // silly stories
+        "I am a TikTok star. Everybody loves me. Everyday, I make about 20 new tik toks. I have a butler which go out for me and by me things, because I cant get out of my house without people want a selfie with me. It is the worse.",
+        "I lost all my senses. I cant see, I cant hear, I cant smell, I cant taste, and I cant feel. There is an my brain is used by AI Machine that helps me with day to day tasks. Like speaking, it speaks for me. It helps me to hear. At school, kids used to call me cyborg, and bullied me. It was a hard time for me.",
+        "When I was a kid my mom died 7 times. Every time she dies, it is worse that the one before. She is cursed, so once a year she die, and go back to life. Every time she come back to life, the whole family hope the curse go away to someone else. We are afraid that she will die, and will never wake up.",
+        "I have one mom and two dads. My mom didn't know who is the father so she married both of them. When I was a kid all my kids laughed at me, and bullied me. I forgot to keep it in secret, so I changed school every year. So I kept telling it, and kept suffering from bulling. So it was hard for me the have friends.",
+        ""
+
         ))
 
     init {
