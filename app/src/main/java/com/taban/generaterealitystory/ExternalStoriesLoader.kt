@@ -4,6 +4,7 @@ import android.util.Log
 import org.json.JSONArray
 import java.lang.Exception
 import java.net.URL
+import java.util.concurrent.CopyOnWriteArrayList
 
 class ExternalStoriesLoader(val originalStoriesCollection: StoryCollection) {
 
@@ -16,7 +17,7 @@ class ExternalStoriesLoader(val originalStoriesCollection: StoryCollection) {
 
                 val storiesAsJson = JSONArray(apiResponse)
 
-                val storiesAsList = ArrayList<String>()
+                val storiesAsList = CopyOnWriteArrayList<String>()
                 for (i in 0 until storiesAsJson.length()) {
                     storiesAsList.add(storiesAsJson.getString(i))
                 }
